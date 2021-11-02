@@ -1,12 +1,12 @@
 import numpy as np
-from session1_2 import Utility as util
+import Utility as util
 
 ######### Multi-variant example #########
 
 ######### Gradient Decent Method ########
 
 # Read DataSet from csv file
-data = np.genfromtxt("C:\\Users\\yaser center\\PycharmProjects\\pythonProject\\venv\\session1_2\\data2.csv", delimiter=',')
+data = np.genfromtxt("E:\Projects\ML\session3\data3.csv", delimiter=',')
 print("data dimensions= ",data.shape)
 numOfFeatures = np.size(data, 1) - 1
 
@@ -30,7 +30,7 @@ x0 = np.ones((m, 1))
 x = (np.column_stack((x0, x)))
 
 # Gradient Decent parameters
-alpha =1#0.3#0.01 #0.1#1 [0.01 , 0.03,0.1,0.3]
+alpha =1 #0.3#0.01 #0.1#1 [0.01 , 0.03,0.1,0.3]
 iterations =200 #100#200
 
 # Theta [b, w1, w2]
@@ -58,7 +58,7 @@ print("Predicted price of a 1650 sq-ft, 3 br house (using gradient descent) = ",
 
 ################# Normal Equation ###############
 
-data = np.genfromtxt("C:\\Users\\yaser center\\PycharmProjects\\pythonProject\\venv\\session1_2\\data2.csv", delimiter=',')
+data = np.genfromtxt("E:\Projects\ML\session3\data3.csv", delimiter=',')
 
 x = data[:, 0:numOfFeatures]
 y = data[:, numOfFeatures]
